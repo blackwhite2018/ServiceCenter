@@ -1,0 +1,41 @@
+.preloader__item {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: $preloader-item-color;
+    animation: preloaderItemScale 1.2s;
+    animation-iteration-count: infinite;
+}
+
+.preloader__item:first-child {
+    top: 0;
+    left: 0;
+}
+
+.preloader__item:nth-child(2) {
+    top: 0;
+    right: 0;
+}
+
+.preloader__item:nth-child(3) {
+    bottom: 0;
+    left: 0;
+}
+
+.preloader__item:last-child {
+    bottom: 0;
+    right: 0;
+}
+
+@keyframes preloaderItemScale {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    to {
+        transform: scaele(2.1);
+    }
+}

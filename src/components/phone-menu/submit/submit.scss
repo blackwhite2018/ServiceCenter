@@ -1,0 +1,34 @@
+.btn__submit {
+    background: $btn-background-primary;
+    color: $btn-color-primary;
+    border: 0;
+    border-radius: 16px;
+    padding: 4px 38.86px 4px 8px;
+    text-transform: uppercase;
+    letter-spacing: -0.15px;
+    font-family: "TT Lakes Medium";
+    font-size: 12px;
+    line-height: 24px;
+    position: relative;
+    align-self: flex-end;
+}
+
+.btn__submit::after,
+.btn__submit::before  {
+    content: '';
+    position: absolute;
+    right: 18.29px;
+    top: 11.37px;
+    background: $btn-color-primary;
+    width: 2px;
+    height: 5.6px;
+    border-radius: 2px;
+}
+
+.btn__submit:after {
+    transform: rotate(-45deg);
+}
+
+.btn__submit:before {
+    transform: translateY(3px) rotate(45deg);
+}

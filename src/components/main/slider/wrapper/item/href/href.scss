@@ -1,0 +1,27 @@
+.slider__href {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #FF3E79;
+    position: relative;
+    align-self: flex-end;
+}
+
+.slider__href::before,
+.slider__href::after {
+    content: '';
+    position: absolute;
+    border: 2px solid #FF3E79;
+    border-radius: 2px;
+    height: 8px;
+    left: 50%;
+    top: 50%;
+}
+
+.slider__href:before {
+    transform: translate(-50%, -25%) rotate(45deg);
+}
+
+.slider__href:after {
+    transform: translate(-50%, -75%) rotate(-45deg);
+}

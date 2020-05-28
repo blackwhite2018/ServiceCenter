@@ -1,0 +1,15 @@
+@import 'sub-menu/sub-menu.scss';
+
+.header-right {
+    display: flex;
+}
+
+.header-right__vertical-line {
+    margin: 0 16px 0 20px;
+}
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+    .header-right__vertical-line {
+        display: none;
+    }
+}

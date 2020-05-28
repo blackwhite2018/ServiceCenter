@@ -1,0 +1,30 @@
+@import 'row/row.scss';
+@import 'column/column.scss';
+@import 'colgroup/colgroup.scss';
+@import 'title/title.scss';
+@import 'head/head.scss';
+@import 'body/body.scss';
+@import 'button/button.scss';
+
+.box__table {
+    margin-bottom: 32px;
+}
+
+@media screen and (min-width: 621px) {
+    .table__body {
+        .table__title {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 620px) {
+    .table__title {
+        margin-bottom: 4px;
+    }
+
+    .table__title:nth-child(3),
+    .table__col-group--column .table__title {
+        margin-top: 16px;
+    }
+}

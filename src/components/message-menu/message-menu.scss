@@ -1,0 +1,45 @@
+@import 'form/form.scss';
+
+.message-menu {
+    position: absolute;
+    width: 440px;
+    z-index: 10;
+    background-color: #fff;
+    right: 0;
+    height: 100%;
+    box-shadow: 
+        16px 0px 52px rgba(14, 24, 80, 0.2),
+        -2px 0px 4px rgba(69, 79, 126, 0.02);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-menu__btn-circle {
+    position: absolute;
+    margin-left: -77px;
+    margin-top: 32px;
+}
+
+.menu--hidden {
+    display: none;
+}
+
+@media screen and (min-width: 200px) and (max-width: 513px) {
+    .message-menu__btn-circle {
+        margin-top: 24px;
+        margin-left: 16px;
+    }
+
+    .message-menu {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .message-menu {
+        width: 440px;
+    }
+}

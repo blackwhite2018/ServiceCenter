@@ -1,0 +1,66 @@
+@import 'post/post.scss';
+@import 'sub-menu/sub-menu.scss';
+@import 'slider/slider.scss';
+@import 'box/box.scss';
+
+.main {
+    margin-bottom: 50px;
+}
+
+.title {
+    padding: 16px 0px 16px 32px;
+    color: #7e7e82;
+    background-image: linear-gradient(90deg,hsla(0,0%,97.3%,0) 0,#fff);
+    border-top: 1px solid #d9fff5;
+    border-bottom: 1px solid #d9fff5;
+}
+
+.box__text {
+    width: 46%;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 16px;
+}
+
+.box__btn {
+    position: relative;
+    padding-right: 29.4px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "TT Lakes Medium";
+    text-align: left;
+    display: flex;
+}
+
+.box__btn::after,
+.box__btn::before  {
+    content: '';
+    align-self: center;
+    position: absolute;
+    right: 16px;
+    top: 9px;
+    background: #FF3E79;
+    width: 2px;
+    height: 7px;
+    border-radius: 2px;
+}
+
+.box__btn:after {
+    transform: rotate(-45deg);
+}
+
+.box__btn:before {
+    transform: translateY(3px) rotate(45deg);
+}
+
+.box__text,
+.box__btn {
+    color: #1B1C21;
+    letter-spacing: -0.2px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 760px) {
+    .box__text {
+        width: 100%;
+    }
+}

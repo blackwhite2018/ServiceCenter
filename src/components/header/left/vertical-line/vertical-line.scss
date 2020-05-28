@@ -1,0 +1,27 @@
+.vertical-line {
+    border-radius: 1px;
+    background-color: $vertical-line-color-primary;
+    height: 32px;
+    width: 2px;
+    transform: translateY(4px);
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .header__line_align_vertical {
+        margin-left: 16.73px;
+    }
+
+    .header__vertical-line {
+        display: none;
+    }
+
+    .header-right__vertical-line {
+        margin: 0 16px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1120px) {
+    .header__vertical-line {
+        margin: 0 20.73px 0 20px;
+    }
+}

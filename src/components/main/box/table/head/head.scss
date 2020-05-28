@@ -1,0 +1,19 @@
+.table__head {
+    .table__title:first-child {
+        width: 40%;
+    }
+
+    .table__title:nth-child(2) {
+        width: 20%;
+    }
+
+    .table__title:last-child {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 620px) {
+    .table__head {
+        display: none;
+    }
+}

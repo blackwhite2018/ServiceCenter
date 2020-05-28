@@ -1,0 +1,32 @@
+@import 'btn-circle/btn-circle.scss';
+
+.btn {
+    position: relative;
+    cursor: pointer;
+    background-color: $btn-background-alpha;
+}
+
+.table__button {
+    color: $btn-color-primary;
+    background-color: $btn-background-primary;
+    border-radius: 16px;
+    padding: 4px 12px;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.table__button::before,
+.table__button::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 6px;
+    background-color: $btn-color-primary;
+    border-radius: 2px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}

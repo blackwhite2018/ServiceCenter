@@ -1,0 +1,45 @@
+@import 'copyright/copyright.scss';
+@import 'documents/documents.scss';
+@import 'privacy/privacy.scss';
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $border-color-primary;
+    padding-top: 32px;
+    margin-bottom: 21px;
+}
+
+.footer__copyright {
+    margin-left: 31px;
+}
+
+.footer__privacy {
+    margin-right: 33px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .copyright,
+    .privacy {
+        margin: 0;
+    }
+
+    .footer__copyright {
+        margin-bottom: 16px;
+    }
+
+    .footer__privacy {
+        margin: 16px 0 19px 0;
+    }
+
+    .copyright__text,
+    .documents__item,
+    .privacy__text {
+        text-align: center;
+    }
+}

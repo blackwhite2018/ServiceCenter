@@ -1,0 +1,49 @@
+.btn-circle {
+    position: relative;
+    cursor: pointer;
+    background-color: $btn-background-alpha;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: $btn-background-primary;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: filter 1.2s;
+}
+
+.btn-circle:focus,
+.btn-circle:hover {
+    filter: hue-rotate(270deg);
+}
+
+.btn-circle:not(:last-child) {
+    margin-right: 9px;
+}
+
+.btn-circle--icon--phone {
+    background-image: url("../img/icon_phone.png");
+}
+
+.btn-circle--icon--message {
+    background-image: url("../img/icon_message.png");
+}
+
+.btn-circle--icon--user {
+    background-image: url("../img/icon_user.png");
+}
+
+.btn-circle--icon--repair {
+    background-image: url("../img/icon_tools.png");
+}
+
+.btn-circle--icon--checkstatus {
+    background-image: url("../img/icon_search.png");
+}
+
+.btn-circle--icon--close {
+    background-image: url("../img/icon_close.png");
+}
+
+.mobile-menu__btn-circle--icon--search {
+    background-image: url("../img/mobile-menu_icon_search.png");
+}

@@ -1,0 +1,18 @@
+@import 'title/title.scss';
+@import 'text/text.scss';
+
+html {
+    overflow: hidden;
+}
+
+.noscript {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    background-image: linear-gradient(to top right, $noscript-start-color-primary, $noscript-end-color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,16 @@
+.preloader__container {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    animation: preloadercontainerRotate 2000ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes preloadercontainerRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}

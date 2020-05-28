@@ -1,0 +1,36 @@
+.table__row {
+    display: flex;
+    padding-left: 24px;
+    padding-right: 24px;
+    justify-content: space-between;
+}
+
+.table__row:not(:last-child) {
+    border-bottom: 1px solid $row-border-color;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 620px) {
+    .table__head {
+        //display: none;
+    }
+
+    .table__row {
+        min-width: 260px;
+        height: 200px;
+        box-sizing: border-box;
+        padding: 16px;
+        justify-content: flex-start;
+        background-color: $row-color-primary;
+        flex-direction: column;
+    }
+
+    .table__col,
+    .table__title {
+        padding: 0 !important;
+    }
+
+    .table__row:not(:last-child) {
+        margin-right: 16px;
+    }
+}

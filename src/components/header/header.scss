@@ -1,0 +1,31 @@
+@import 'left/left.scss';
+@import 'right/right.scss';
+
+.header {
+    padding: 24px 16px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+}
+
+.page__header {
+    justify-content: space-between;
+    background-color: $header-color-primary;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .header {
+        min-width: 288px;
+    }
+
+    .header__sub-menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .page__header {
+        display: none;
+    }
+}

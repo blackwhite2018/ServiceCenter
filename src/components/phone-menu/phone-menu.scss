@@ -1,0 +1,37 @@
+@import 'submit/submit.scss';
+@import 'title/title.scss';
+
+.phone-menu {
+    position: absolute;
+    width: 440px;
+    z-index: 10;
+    background-color: $menu-color-primary;
+    right: 0;
+    height: 100%;
+    box-shadow: 
+        16px 0px 52px $menu-shadow-start-color,
+        -2px 0px 4px $menu-shadow-end-color;
+}
+
+.phone-menu__btn-circle {
+    position: absolute;
+    margin-left: -77px;
+    margin-top: 32px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 513px) {
+    .phone-menu__btn-circle {
+        margin-top: 24px;
+        margin-left: 16px;
+    }
+
+    .phone-menu {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .phone-menu {
+        width: 440px;
+    }
+}

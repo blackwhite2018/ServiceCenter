@@ -1,0 +1,10 @@
+@import 'box/box.scss';
+@import 'item/item.scss';
+
+.slider-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 32px;
+}
