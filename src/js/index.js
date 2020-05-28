@@ -4,10 +4,8 @@ import './../scss/index.scss';
 (function() {
 	'use strict';
 
-	const modalBackground = document.querySelector('.modal--background');
 	const html = document.querySelector('html');
 	html.style.overflowY = 'hidden';
-	let countOpenMenu = 0;
 
 	const initialPreloader = () => {
 		const preloader = document.querySelector('.preloader');
@@ -20,7 +18,7 @@ import './../scss/index.scss';
 	};
 
 	const initialSwiper = sliders => {
-		if (window.innerWidth >= 320 && window.innerWidth <= 360) {
+		if (window.innerWidth >= 320 && window.innerWidth <= 520) {
 			for (let [container, pagination] of sliders) {
 				new Swiper(container, {
 					slidesPerView: 1,
@@ -48,6 +46,7 @@ import './../scss/index.scss';
 				btn.children[0].textContent = count++ % 2 === 0 ? 'Скрыть все' : 'Показать все';
 				elems.forEach(elem => {
 					elem.classList.toggle('slider__item--show');
+					btn.previousElementSibling.classList.toggle('is-active');
 					elem.classList.toggle('slider__item--hidden');
 				});
 			});
@@ -61,10 +60,8 @@ import './../scss/index.scss';
 				const data = btn.dataset.menu;
 
 				if (data) {
-					countOpenMenu++;
-					const menu = document.querySelector(`.${ data }`);
-					menu.classList.remove('menu--hidden');
-					modalBackground.classList.add('modal--background--hidden');
+					const menu = document.querySelector(`.${data}`);
+					menu.classList.remove(`${data}--hidden`);
 					html.style.overflow = 'hidden';
 				}
 			});
@@ -79,11 +76,7 @@ import './../scss/index.scss';
 
 				if (menu) {
 					html.style.overflow = 'auto';
-					document.querySelector(`.${btn.dataset.menu}`).classList.add('menu--hidden');
-
-					if (--countOpenMenu === 0) {
-						modalBackground.classList.remove('modal--background--hidden');
-					}
+					document.querySelector(`.${btn.dataset.menu}`).classList.add(`${menu}--hidden`);
 				}
 			});
 		});

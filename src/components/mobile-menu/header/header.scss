@@ -4,6 +4,11 @@
     box-sizing: border-box;
     position: relative;
     display: flex;
+    justify-content: space-between;
+}
+
+.header__box {
+    display: flex;
 }
 
 .page__header {
@@ -13,7 +18,7 @@
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .header {
-        min-width: 288px;
+        width: 100%;
     }
 
     .header__sub-menu {

@@ -20,7 +20,7 @@
     font-size: 28px;
     line-height: 40px;
     letter-spacing: -0.6px;
-    color: $title-color;
+    color: $post-title-color;
     white-space: nowrap;
     font-family: "TT Lakes Bold";
     display: flex;
@@ -39,7 +39,7 @@
 }
 
 .post__text {
-    padding: 0 16px 16px 0;
+    padding: 0 16px 0 0;
     color: $text-color;
     font-family: "TT Lakes Regular";
     font-size: 14px;
@@ -140,6 +140,25 @@
     flex-direction: column;
 }
 
+@media screen and (min-width: 200px) and (max-width: 520px) {
+    .main__post {
+        margin: 0;
+    }
+
+    .main__post-container {
+        margin: 24px 16px 0 16px;
+    }
+
+    .post__btn-readmore {
+        margin-top: 16px;
+        margin-bottom: 0;
+    }
+
+    .main__post-img {
+        margin-bottom: 0;
+    }
+}
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .main {
         min-width: 320px;
@@ -150,7 +169,6 @@
         margin-right: 0;
     }
 
-    .main__post-container,
     .main__slides-menu,
     .post__column {
         padding-left: 16px;

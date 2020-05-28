@@ -3,9 +3,9 @@
 @import 'img/img.scss';
 
 .slider__item {
-    margin-bottom: 16px;
     box-sizing: border-box;
     display: flex;
+    width: 240px !important;
     min-width: 240px;
     min-height: 72px;
     align-items: center;
@@ -14,6 +14,7 @@
     border-radius: 6px;
     background-color: #fff;
     border: 1px solid #EAEAEA;
+    margin-bottom: 16px;
 }
 
 .slider__item--hidden {

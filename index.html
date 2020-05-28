@@ -20,8 +20,6 @@
 				</section>
 			</noscript>
 
-			<div class="modal--background"></div>
-
 			<div class="preloader">
 				<div class="preloader__container">
 					<div class="preloader__item"></div>
@@ -31,75 +29,94 @@
 				</div>
 			</div>
 
-			<section class="message-menu menu--hidden">
-				<button type="button" data-menu="message-menu" class="btn-circle btn-circle--icon--close message-menu__btn-circle"></button>
-				<div class="message-menu__title">
-					<h3 class="message-menu__title-text">Обратная связь</h3>
+			<section class="message-menu message-menu--hidden overlay">
+				<div class="message-menu__content">
+					<button type="button" data-menu="message-menu" class="btn-circle btn-circle--icon--close message-menu__btn-circle"></button>
+					<div class="message-menu__title">
+						<h3 class="message-menu__title-text">Обратная связь</h3>
+					</div>
+					<form action="/" method="POST" class="form">
+						<input type="text" class="form__input" name="name" placeholder="Имя">
+						<input type="phone" class="form__input" name="phone" placeholder="Телефон">
+						<input type="email" class="form__input" name="email" placeholder="Электронная почта">
+						<textarea name="message" class="form__textarea" cols="30" rows="10" placeholder="Сообщение"></textarea>
+						<p class="form__text">
+							Нажимая "отправить", вы даете согласие на <a href="/" class="form__href" target="_blank">обработку персональных данных</a>
+							и соглашаетесь с нашей <a href="/" class="form__href" target="_blank">политикой конфиденциальности</a>.
+						</p>
+						<button type="submit" class="btn btn__submit">Отправить</button>
+					</form>
 				</div>
-				<form action="/" method="POST" class="form">
-					<input type="text" class="form__input" name="name" placeholder="Имя">
-					<input type="phone" class="form__input" name="phone" placeholder="Телефон">
-					<input type="email" class="form__input" name="email" placeholder="Электронная почта">
-					<textarea name="message" class="form__textarea" cols="30" rows="10" placeholder="Сообщение"></textarea>
-					<p class="form__text">
-						Нажимая "отправить", вы даете согласие на <a href="/" class="form__href" target="_blank">обработку персональных данных</a>
-						и соглашаетесь с нашей <a href="/" class="form__href" target="_blank">политикой конфиденциальности</a>.
-					</p>
-					<button type="submit" class="btn btn__submit">Отправить</button>
-				</form>
 			</section>
 
-			<section class="phone-menu menu--hidden">
-				<button type="button" data-menu="phone-menu" class="btn-circle phone-menu__btn-circle btn-circle--icon--close"></button>
-				<div class="phone-menu__title">
-					<h3 class="phone-menu__title-text">Заказать звонок</h3>
+			<section class="phone-menu phone-menu--hidden overlay">
+				<div class="phone-menu__content">
+					<button type="button" data-menu="phone-menu" class="btn-circle phone-menu__btn-circle btn-circle--icon--close"></button>
+					<div class="phone-menu__title">
+						<h3 class="phone-menu__title-text">Заказать звонок</h3>
+					</div>
+					<form action="/" method="POST" class="form">
+						<input type="phone" class="form__input" name="phone" placeholder="Телефон">
+						<p class="form__text">
+							Нажимая "отправить", вы даете согласие на <a href="/" class="form__href" target="_blank">обработку персональных данных</a>
+							и соглашаетесь с нашей <a href="/" class="form__href" target="_blank">политикой конфиденциальности</a>.
+						</p>
+						<button type="submit" class="btn btn__submit">Отправить</button>
+					</form>
 				</div>
-				<form action="/" method="POST" class="form">
-					<input type="phone" class="form__input" name="phone" placeholder="Телефон">
-					<p class="form__text">
-						Нажимая "отправить", вы даете согласие на <a href="/" class="form__href" target="_blank">обработку персональных данных</a>
-						и соглашаетесь с нашей <a href="/" class="form__href" target="_blank">политикой конфиденциальности</a>.
-					</p>
-					<button type="submit" class="btn btn__submit">Отправить</button>
-				</form>
 			</section>
 			
-            <div class="mobile-menu menu--hidden">
+            <div class="mobile-menu mobile-menu--hidden">
+				<div class="mobile-menu__content">
 
-                <header class="header mobile-menu__header">
-                    <button type="button" data-menu="mobile-menu" class="btn-circle btn-circle--icon--close mobile-menu__btn-circle--icon--close"></button>
-                    <div class="logo mobile-menu__logo">
-                        <img src="src/img/logo.png" class="logo__img" alt="Логотип CPS">
-                    </div>
-                    <button type="button" class="btn-circle mobile-menu__btn-circle--icon--search"></button>
-				</header>
-				
-                <nav class="menu mobile-menu__menu">
-                    <a href="" class="menu__item menu__item--active" target="_blank">Ремонт техники</a>
-                    <a href="" class="menu__item" target="_blank">Услуги и сервисы</a>
-                    <a href="" class="menu__item" target="_blank">Корпоративным клиентам</a>
-                    <a href="" class="menu__item" target="_blank">Продавцам техники</a>
-                    <a href="" class="menu__item" target="_blank">Партнерам</a>
-                    <a href="" class="menu__item" target="_blank">Производителям</a>
-                    <a href="" class="menu__item" target="_blank">Наши сервисные центры</a>
-                    <a href="" class="menu__item" target="_blank">Контакты</a>
-				</nav>
-				
-                <div class="sub-menu mobile-menu__sub-menu">
-                    <button type="button" data-menu="phone-menu" class="btn-circle btn-circle--icon--phone btn-circle--open"></button>
-                    <button type="button" data-menu="message-menu" class="btn-circle btn-circle--icon--message btn-circle--open"></button>
-                    <button type="button" class="btn-circle btn-circle--icon--user"></button>
-				</div>
-				
-                <div class="info mobile-menu__info">
-                    <a href="mailto:mail@cps.com" class="info__mail">mail@cps.com</a>
-                    <a href="tel:88008908900" class="info__phone">8 800 890 8900</a>
-				</div>
-				
-                <div class="lang mobile-menu__lang">
-                    <a href="/" class="lang__item lang__item--active">RU</a>
-                    <a href="/" class="lang__item">EN</a>
-                    <a href="/" class="lang__item">CH</a>
+					<div class="mobile-menu__box">
+
+						<header class="header mobile-menu__header">
+							<div class="header__box">
+								<button type="button" data-menu="mobile-menu" class="btn-circle btn-circle--icon--close mobile-menu__btn-circle--icon--close"></button>
+								<div class="logo mobile-menu__logo">
+									<img src="src/img/logo.png" class="logo__img" alt="Логотип CPS">
+								</div>
+							</div>
+							<div class="header__box">
+								<button type="button" class="btn-circle mobile-menu__btn-circle--icon--search"></button>
+							</div>
+						</header>
+						
+						<nav class="menu mobile-menu__menu">
+							<a href="" class="menu__item menu__item--active" target="_blank">Ремонт техники</a>
+							<a href="" class="menu__item" target="_blank">Услуги и сервисы</a>
+							<a href="" class="menu__item" target="_blank">Корпоративным клиентам</a>
+							<a href="" class="menu__item" target="_blank">Продавцам техники</a>
+							<a href="" class="menu__item" target="_blank">Партнерам</a>
+							<a href="" class="menu__item" target="_blank">Производителям</a>
+							<a href="" class="menu__item" target="_blank">Наши сервисные центры</a>
+							<a href="" class="menu__item" target="_blank">Контакты</a>
+						</nav>
+
+					</div>
+					
+					<div class="mobile-menu__box">
+
+						<div class="sub-menu mobile-menu__sub-menu">
+							<button type="button" data-menu="phone-menu" class="btn-circle btn-circle--icon--phone btn-circle--open"></button>
+							<button type="button" data-menu="message-menu" class="btn-circle btn-circle--icon--message btn-circle--open"></button>
+							<button type="button" class="btn-circle btn-circle--icon--user"></button>
+						</div>
+						
+						<div class="info mobile-menu__info">
+							<a href="mailto:mail@cps.com" class="info__mail">mail@cps.com</a>
+							<a href="tel:88008908900" class="info__phone">8 800 890 8900</a>
+						</div>
+						
+						<div class="lang mobile-menu__lang">
+							<a href="/" class="lang__item lang__item--active">RU</a>
+							<a href="/" class="lang__item">EN</a>
+							<a href="/" class="lang__item">CH</a>
+						</div>
+
+					</div>
+
 				</div>
 				
 			</div>

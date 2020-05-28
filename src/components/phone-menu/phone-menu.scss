@@ -2,9 +2,26 @@
 @import 'title/title.scss';
 
 .phone-menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.phone-menu--hidden {
+    border: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    clip: react(0 0 0 0);
+    clip-path: inset(50%);
+}
+
+.phone-menu__content {
     position: absolute;
     width: 440px;
-    z-index: 10;
     background-color: $menu-color-primary;
     right: 0;
     height: 100%;
@@ -14,9 +31,25 @@
 }
 
 .phone-menu__btn-circle {
-    position: absolute;
     margin-left: -77px;
     margin-top: 32px;
+}
+
+.overlay {
+    opacity: .96;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+@media screen and (min-width: 514px) {
+    .phone-menu__btn-circle {
+        position: absolute;
+    }
 }
 
 @media screen and (min-width: 200px) and (max-width: 513px) {
@@ -25,13 +58,7 @@
         margin-left: 16px;
     }
 
-    .phone-menu {
+    .phone-menu__content {
         width: 100%;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .phone-menu {
-        width: 440px;
     }
 }
