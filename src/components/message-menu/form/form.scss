@@ -1,0 +1,16 @@
+@import 'title/title.scss';
+@import 'input/input.scss';
+@import 'textarea/textarea.scss';
+@import 'submit/submit.scss';
+@import 'text/text.scss';
+@import 'href/href.scss';
+
+.form {
+    padding: 0 32px 0 31px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 513px) {
+    .form {
+        padding: 0 16px;
+    }
+}

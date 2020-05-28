@@ -1,0 +1,17 @@
+@import 'button/button.scss';
+@import 'line/line.scss';
+
+.hamburger-menu {
+    position: relative;
+    height: 40px;
+}
+
+.header__hamburger-menu {
+    margin-right: 16.73px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1120px) {
+    .header__hamburger-menu {
+        margin-right: 0;
+    }
+}

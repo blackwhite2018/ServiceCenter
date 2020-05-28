@@ -1,0 +1,11 @@
+.table__body {
+    background: $table-background-primary;
+    border-radius: 6px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 620px) {
+    .table__body {
+        display: flex;
+        background-color: transparent;
+    }
+}

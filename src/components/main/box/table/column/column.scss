@@ -1,0 +1,43 @@
+.table__col {
+    display: flex;
+    align-items: center;
+    color: $col-color-primary;
+    font-size: 14px;
+    height: 100%;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+}
+
+.table__col:nth-child(2) {
+    width: 40%;
+}
+
+.table__col:nth-child(4) {
+    width: 20%;
+}
+
+.table__col:not(:last-child) {
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+.table__col-group {
+    > .table__col {
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 620px) {
+    .table__row {
+        .table__col {
+            width: 100%;
+            display: flex;
+        }
+    }
+
+    .table__col-group {
+        > .table__col {
+            align-items: flex-end;
+        }
+    }
+}

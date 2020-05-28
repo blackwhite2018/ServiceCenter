@@ -1,0 +1,20 @@
+.hamburger-menu__button::before,
+.hamburger-menu__button::after {
+    background-color: $vertical-line-color-primary;
+    border-radius: 1px;
+    height: 2px;
+    left: 11px;
+    position: absolute;
+}
+
+.hamburger-menu__button:before {
+    content: '';
+    width: 18px;
+    top: 12px;
+}
+
+.hamburger-menu__button:after {
+    content: '';
+    width: 14px;
+    bottom: 12px;
+}

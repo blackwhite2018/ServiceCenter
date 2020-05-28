@@ -1,0 +1,31 @@
+.phone-menu__title {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "TT Lakes Bold";
+    color: $title-color-primary;
+    letter-spacing: -0.6px;
+    padding: 40px 31px 24px 31px;
+    position: relative;
+}
+
+.phone-menu__title::before {
+    content: '';
+    width: 3px;
+    position: absolute;
+    left: 0;
+    transform: translateY(-4px);
+    background: $vertical-line-color;
+    height: 40px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 513px) {
+    .phone-menu__title:before {
+        width: 4px;
+    }
+
+    .phone-menu__title {
+        padding-left: 16px;
+    }
+}

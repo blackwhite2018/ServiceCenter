@@ -1,0 +1,31 @@
+.table__btn {
+    background: $btn-background-primary;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    color: $btn-color-primary;
+    border-radius: 16px;
+    font-family: "TT Lakes Medium";
+    padding: 4px 39px 4px 12px;
+}
+
+.table__btn::after,
+.table__btn::before  {
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 11.37px;
+    background: $btn-color-primary;
+    width: 2px;
+    height: 5.6px;
+    border-radius: 2px;
+}
+
+.table__btn:after {
+    transform: rotate(-45deg);
+}
+
+.table__btn:before {
+    transform: translateY(3px) rotate(45deg);
+}

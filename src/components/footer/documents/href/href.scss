@@ -1,0 +1,8 @@
+.documents__href {
+    color: $text-color-primary;
+}
+
+.documents__href:hover,
+.documents__href:focus {
+    font-weight: bold;
+}

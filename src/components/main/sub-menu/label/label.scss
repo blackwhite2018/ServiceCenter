@@ -1,0 +1,8 @@
+.sub-menu__label {
+    display: flex;
+    align-items: center;
+}
+
+.sub-menu__label:not(:last-child) {
+    margin-right: 32px;
+}

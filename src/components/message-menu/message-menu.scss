@@ -1,0 +1,67 @@
+@import 'form/form.scss';
+
+.message-menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.message-menu--hidden {
+    border: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    clip: react(0 0 0 0);
+    clip-path: inset(50%);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-menu__btn-circle {
+    margin-left: -77px;
+    margin-top: 32px;
+}
+
+.message-menu__content {
+    position: absolute;
+    width: 440px;
+    background-color: #fff;
+    height: 100%;
+    box-shadow: 
+        16px 0px 52px rgba(14, 24, 80, 0.2),
+        -2px 0px 4px rgba(69, 79, 126, 0.02);
+}
+
+.overlay {
+    opacity: .96;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+@media screen and (min-width: 514px) {
+    .message-menu__btn-circle {
+        position: absolute;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 513px) {
+    .message-menu__btn-circle {
+        margin-top: 24px;
+        margin-left: 16px;
+    }
+
+    .message-menu__content {
+        width: 100%;
+    }
+}

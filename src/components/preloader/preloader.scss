@@ -1,0 +1,31 @@
+@import 'container/container.scss';
+@import 'item/item.scss';
+
+.preloader {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top right, $preloader-start-color-primary, $preloader-end-color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loaded {
+    display: none;
+}
+
+.loaded_hiding {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+@keyframes {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
